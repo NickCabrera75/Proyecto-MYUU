@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Proyecto MYUU </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <link href="img/favicon.jpg" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- JavaScript Librerias -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/audioPlayer.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#hero">MYUU</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#Artistas">Artistas</a></li>
+          <li><a href="#Albumes">Albumes</a></li>
+          <li><a href="#reproductor">Reproductor</a></li>
+          <li><a href="#contact">Contactanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <footer id="footer">
+    <div class="container">
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu"> 
+          <li><a href="#reproductor" onclick="PreviousPlayer()">Anterior</a></li>
+          <li><a href="#reproductor" onclick="pausePlayer()">Play/Pausa</a></li>
+          <li><a href="#reproductor" onclick="nextPlayer()">Siguiente</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Welcome to "MYUU"</h1>
+      <h2>Music You Unite Us</h2>
+      <a href="#Artistas" class="btn-get-started">Explora</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!--ARTISTAS-->
+    <section id="Artistas">
+      <section id="portfolio">
+        <div class="container wow fadeInUp">
+          <div class="section-header">
+            <h3 class="section-title">Artistas</h3>
+            <p class="section-description">Esta es la seccion de los artistas</p>
+          </div>
+  
+          <div class="row" id="portfolio-flters">
+            
+            <div id="portfolio-flters" class="col-lg-3 col-md-6 portfolio-item filter-artist">
+              <a data-filter=".filter-app, .filter-card, .filter-logo, .filter-web, .filter-artist" class="filter-active" href="#Albumes">
+                <img src="img/rock.jpg" alt="">
+                <div class="details">
+                  <h4>Todos</h4>
+                </div>
+              </a>
+            </div>  
+
+            <div id="portfolio-flters" class="col-lg-3 col-md-6 portfolio-item filter-artist">
+              <a data-filter=".filter-Amaranthe, .filter-artist" href="#Albumes">
+                <img src="images/Amaranthe_Band.jpg" alt="">
+                <div class="details">
+                  <h4>Amaranthe</h4>
+                </div>
+              </a>
+            </div>
+
+            <div id="portfolio-flters" class="col-lg-3 col-md-6 portfolio-item filter-artist">
+              <a data-filter=".filter-Skillet, .filter-artist" href="#Albumes">
+                <img src="images/Skillet_Band.jpg" alt="">
+                <div class="details">
+                  <h4>Skillet</h4>
+                </div>
+              </a>
+            </div>
+
+            <div id="portfolio-flters" class="col-lg-3 col-md-6 portfolio-item filter-artist">
+              <a data-filter=".filter-Avantasia, .filter-artist" href="#Albumes">
+                <img src="images/Avantasia_Band.jpg" alt="">
+                <div class="details">
+                  <h4>Avantasia</h4>
+                </div>
+              </a>
+            </div>
+
+            <div id="portfolio-flters" class="col-lg-3 col-md-6 portfolio-item filter-artist">
+              <a data-filter=".filter-Flames, .filter-artist" href="#Albumes">
+                <img src="images/TheUnguided_Band.jpg" alt="">
+                <div class="details">
+                  <h4>In Flames</h4>
+                </div>
+              </a>
+            </div>
+          </div>
+  
+        </div>
+      </section>
+    </section>
+
+    <!--ALBUMS-->
+    <section id="Albumes">
+      <section id="portfolio">
+        <div class="container wow fadeInUp">
+          <div class="section-header">
+            <h3 class="section-title">Albumes</h3>
+            <p class="section-description">En esta seccion encontrara los albums, tambien puede agrupar por artista</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <ul id="portfolio-flters">
+                <li data-filter=".filter-Amaranthe, .filter-Skillet, .filter-Avantasia, .filter-Flames, .filter-artist" class="filter-active">All</li>
+                <li data-filter=".filter-Amaranthe, .filter-artist">Amaranthe</li>
+                <li data-filter=".filter-Skillet, .filter-artist">Skillet</li>
+                <li data-filter=".filter-Avantasia, .filter-artist">Avantasia</li>
+                <li data-filter=".filter-Flames, .filter-artist">In Flames</li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="row" id="portfolio-wrapper">
+            <div class="col-lg-3 col-md-6 portfolio-item filter-Amaranthe">
+              <a>
+                <img src="images/Albums/Amaranthe_Maximalism.jpg" alt="" onclick="Amaranthe_Album_Maximimalism()">
+                <div class="details">
+                  <h4>MAXIMALISM</h4>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6 portfolio-item filter-Skillet">
+              <a>
+                <img src="images/Albums/Skillet_Unleashed.jpg" alt="" onclick="Skillet_Album_Unleashed()">
+                <div class="details">
+                  <h4>Unleashed</h4>
+                </div>
+              </a>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 portfolio-item filter-Skillet">
+              <a>
+                <img src="images/Albums/Skillet_Awake.jpg" alt="" onclick="Skillet_Album_Awake()">
+                <div class="details">
+                  <h4>Awake</h4>
+                </div>
+              </a>
+            </div>  
+  
+            <div class="col-lg-3 col-md-6 portfolio-item filter-Avantasia">
+              <a>
+                <img src="images/Albums/Avantasia_Ghostlights.jpg" alt="" onclick="Avantasia_Album_Ghostlight()">
+                <div class="details">
+                  <h4>Ghostlights</h4>
+                </div>
+              </a>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 portfolio-item filter-Flames">
+              <a>
+                <img src="images/Albums/InFlames_Battles.jpg" alt="" onclick="InFlames_Album_Battles()">
+                <div class="details">
+                  <h4>Battles</h4>
+                </div>
+              </a>
+            </div>      
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!--REPRODUCTOR-->
+    <section id="reproductor">
+      <div class="container">
+        <div class="row reproductor-container">
+
+          <div class="col-lg-6 content order-lg-1 order-2">
+            <h2 class="title">Reproductor</h2>
+            <audio src="" controls id="audioPlayer">
+                Lo siento, su Navegador no soporta html5!
+            </audio>
+          </div>
+
+          <div class="col-lg-6 order-lg-2 order-1 wow fadeInRight">
+            <ul id="playlist"></ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!--CONTACTOS-->
+    <section id="contact">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Contacto</h3><br>
+          <p class="section-description">Informacion para contactarnos</p>
+          <p class="section-description">Nuestros nombres son: Moises Choque y Nick Cabrera</p>
+          <p class="section-description">Gracias por usar Nuestra Pagina Web</p>
+        </div>
+      </div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7614.221938122638!2d-66.19975264741569!3d-17.406461412565154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3737af719aec1%3A0x92e39c6d2618a86b!2zMTfCsDI0JzE4LjUiUyA2NsKwMTEnNTMuOSJX!5e0!3m2!1ses!2sbo!4v1576235112049!5m2!1ses!2sbo" 
+              width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      <div class="container wow fadeInUp mt-5">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Calle Johannes Gutenberg<br>Cochabamba, N° ...</p>
+              </div>
+
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p>ccm1008277@est.univalle.edu</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+591 78347611</p>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Porfavor Ingrese su Nombre" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Ingrese un email valido" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Ingrese al menos 8 caracteres" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" data-rule="required" data-msg="Describa el asunto del cual quiere hablar con nosotros" ></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit">Enviar mensaje</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  
+
+</body>
+</html>
